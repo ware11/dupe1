@@ -44,12 +44,12 @@ local TextBox_5 = Instance.new("TextButton")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.ResetOnSpawn = true
+ScreenGui.ResetOnSpawn = false
 
 Frame.Parent = ScreenGui
 Frame.AnchorPoint = Vector2.new(0.5, 0.5)
-Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+Frame.BorderColor3 = Color3.fromRGB(255, 45, 0)
 Frame.BorderSizePixel = 2
 Frame.Position = UDim2.new(0.5, 0, 0.564318538, 0)
 Frame.Size = UDim2.new(0, 429, 0, 385)
@@ -106,8 +106,8 @@ TextBox_2.TextSize = 14.000
 TextBox_2.Transparency = 1
 
 Frame_3.Parent = Frame
-Frame_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+Frame_3.BorderColor3 = Color3.fromRGB(43, 43, 43)
 Frame_3.Position = UDim2.new(0.0233100224, 0, 0.384053171, 0)
 Frame_3.Size = UDim2.new(0, 408, 0, 224)
 
