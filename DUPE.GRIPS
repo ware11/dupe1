@@ -142,7 +142,7 @@ coroutine.wrap(UQVFS_fake_script)()
 local function BBRSMDZ_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
-	local HotKey = Enum.KeyCode.Q-- Key to open Gui --
+	local HotKey = Enum.KeyCode.F2-- Key to open Gui --
 	local UIS = game:GetService("UserInputService")
 	
 	UIS.InputBegan:Connect(function(Key)
