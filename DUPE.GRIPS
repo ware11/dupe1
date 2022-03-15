@@ -14,6 +14,8 @@ local orange3 = Instance.new("Frame")
 local UIGradient = Instance.new("UIGradient")
 local TextLabel = Instance.new("TextLabel")
 local TextLabel_2 = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
 
 --Properties:
 
@@ -29,7 +31,6 @@ Frame.BorderColor3 = Color3.fromRGB(255, 145, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.5, 131, 0.564318538, -115)
 Frame.Selectable = true
-Frame.Draggable = true
 Frame.Size = UDim2.new(0, 429, 0, 250)
 
 Amount.Name = "Amount"
@@ -98,9 +99,21 @@ TextLabel_2.Text = "put any amount you want to dupe."
 TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_2.TextSize = 14.000
 
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+TextButton.Position = UDim2.new(0, 415, 0, 1)
+TextButton.Size = UDim2.new(0, 10, 0, 10)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = ""
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+UICorner_3.CornerRadius = UDim.new(0, 3)
+UICorner_3.Parent = TextButton
+
 -- Scripts:
 
-local function UQVFS_fake_script() -- Dupe.LocalScript 
+local function BWIKKAP_fake_script() -- Dupe.LocalScript 
 	local script = Instance.new('LocalScript', Dupe)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -138,11 +151,11 @@ local function UQVFS_fake_script() -- Dupe.LocalScript
 		end)
 	
 end
-coroutine.wrap(UQVFS_fake_script)()
-local function BBRSMDZ_fake_script() -- Frame.LocalScript 
+coroutine.wrap(BWIKKAP_fake_script)()
+local function EOXBKXZ_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
-	local HotKey = Enum.KeyCode.F2-- Key to open Gui --
+	local HotKey = Enum.KeyCode.Q-- Key to open Gui --
 	local UIS = game:GetService("UserInputService")
 	
 	UIS.InputBegan:Connect(function(Key)
@@ -151,41 +164,12 @@ local function BBRSMDZ_fake_script() -- Frame.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BBRSMDZ_fake_script)()
+coroutine.wrap(EOXBKXZ_fake_script)()
+local function WCSNGH_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
 
-_G.target = game.Players.LocalPlayer.Name
-local plr = game:GetService("Players").LocalPlayer
-local charr = game:GetService("Players").LocalPlayer.Character
-local players = game:GetService("Players"):GetPlayers()
-local Player = game:GetService("Players").LocalPlayer
-local Char = Player.Character
-local pg = true
-local LogPlay = false
-local Ignore = {"rbxasset://sounds/action_footsteps_plastic.mp3", "rbxasset://sounds/impact_water.mp3", "rbxasset://sounds/uuhhh.mp3", "rbxasset://sounds/action_swim.mp3", "rbxasset://sounds/action_get_up.mp3", "rbxasset://sounds/action_falling.mp3", "rbxasset://sounds/action_jump.mp3", "rbxasset://sounds/action_jump_land.mp3"}
-local Tween = function(Obj, Time, Style, Direction, Table)
-	game:GetService("TweenService"):Create(Obj, TweenInfo.new(Time, Enum.EasingStyle[Style], Enum.EasingDirection[Direction], 0, false, 0), Table):Play()
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Parent.Enabled = false
+	end)
 end
-
-Frame.FocusLost:connect(function(Enter)
-	if Enter then
-		equip()
-		wait()
-		local Bait = confuzzle("142376088")
-		local ID = genId(Frame.Text)
-		ID = string.gsub(ID, "%X%x", function(symbol)
-			return symbol .. string.rep("  ", 2)
-		end)
-		Bait = string.gsub(Bait, "%x%x", function(symbol)
-			return symbol .. string.rep("   ", 2)
-		end)
-		h = "&\n?\n     <woah>\n        " .. confuzzle(Bait) .. "\n     </>\n     <string>\n        " .. Player.Name .. " <- very kewl\n     </>\n     <lmao>\n     </>\n?"
-		ID = "0\n?\n \n\n\n\n          [ griphub_ss! ]" .. ID .. h
-		for i, v in next, Player.Character:GetDescendants() do
-			if v:IsA("RemoteEvent") then
-				v:FireServer("PlaySong", ID)
-			end
-		end
-	end
-	wait(1)
-	confuzzle.Text = ""
-end)
+coroutine.wrap(WCSNGH_fake_script)()
